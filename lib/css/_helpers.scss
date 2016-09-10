@@ -1,0 +1,115 @@
+// Colour Variables
+$purple: #737373;
+$black: #201A03;
+$white: #EBF3F6;
+
+$primary: #3E6B48; // green
+$primary-dark: darken($primary, 5%);
+$primary-light: lighten($primary, 10%);
+$secondary: #7E9991; // blue
+$secondary-dark: darken($secondary, 5%);
+$secondary-light: lighten($secondary, 10%);
+$body: #EBF3F6; // white
+$text-light: #EBF3F6; // white
+$text-dark: #201A03; // black
+
+
+.heading-light {
+	color: $text-light;
+}
+.heading-dark {
+	color: $text-dark;
+}
+
+.text-light {
+	color: lighten($text-light, 5%);
+}
+
+.text-dark {
+	color: lighten($text-dark, 5%);
+}
+
+.vertical-align {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	-moz-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	-webkit-transform: translateY(-50%);
+	-o-transform: translateY(-50%);
+}
+
+.fullscreen {
+	width: 100vw;
+	height: 100vh;
+}
+
+.angle {
+	transform: rotate(-5deg);
+	-moz-transform: rotate(-5deg);
+	-ms-transform: rotate(-5deg);
+	-webkit-transform: rotate(-5deg);
+	-o-transform: rotate(-5deg);
+	transform-origin: left center;
+}
+
+.straighten {
+	transform: rotate(5deg);
+	-moz-transform: rotate(5deg);
+	-ms-transform: rotate(5deg);
+	-webkit-transform: rotate(5deg);
+	-o-transform: rotate(5deg);
+	transform-origin: left center;
+}
+
+
+.btn {
+	border-radius: 4px;
+	box-shadow: 2px 3px 2px $black;
+	padding: 10px 20px;
+	color: $white;
+	&.btn-primary {
+		background-color: $primary;
+		&:hover {
+			background-color: $primary-dark;
+		}
+	}
+	&.btn-secondary {
+		background-color: $secondary;
+		&:hover {
+			background-size: $secondary-dark;
+		}
+	}
+}
+
+.form {
+	.form-item {
+		position: relative;
+		input {
+			height: 40px;
+			border: 1px solid $white;
+			&:focus {
+				border-color: $primary;
+				& + label {
+					top: -30px;
+					opacity: 1;
+				}
+			}
+
+		}
+		label {
+			position: absolute;
+			top: -10px;
+			left: 5px;
+			opacity: 0;
+		}
+	}
+}
+
+
+
+// Keyframe animations
+
+
+
+

@@ -1,0 +1,138 @@
+// global resets
+@import "global-resets.scss";
+
+// include materialize
+@import "materialize/materialize.scss";
+
+// get all my helper classes
+@import "_helpers.scss";
+
+
+
+// HTML defaults
+html,
+body {
+	width: 100%;
+	height: 100%;
+}
+
+html {
+	// sets to browsers version of 10px
+	font-size: 62.5%; 
+}
+
+body {
+	background: $white;
+	font-size: 1.6rem;
+	font-family: 'helvetica', arial;
+}
+
+h1,h2,h3,h4,h5,h6,
+.h1,.h2,.h3,.h4,.h5,.h6 {
+	font-family: serif;
+	font-weight: bold;
+}
+
+// * {
+// 	transition: all 0.3s ease-in-out;
+// }
+
+
+// Navigtion
+header {
+	background-color: transparent;
+	&.fixed {
+		background-color: lighten($primary, 10%);
+		position: fixed;
+		top: 0;
+		nav {
+			background-color: lighten($primary, 10%);
+			a {
+				color: $white;
+			}
+		}	
+	}
+	nav {
+		background: $white;
+		box-shadow: none;
+		a,
+		div {
+			color: $black;
+			display: inline-block;
+			&:hover {
+				color: lighten($primary, 10%);
+			}
+		}
+	}
+}
+
+// mobile Navigation
+.menu-drawer {
+	position: fixed;
+	background-color: $primary;
+	top: 0;
+	height: 100%;
+	overflow-x: hidden;
+	overflow-y: auto;
+	-webkit-overflow-scrolling: touch;
+	width: 80%;
+	color: #fff;
+	z-index: 2;
+	left: -80%;
+	&.active {
+		left: 0
+	}
+}
+
+
+// intro section styles 
+
+#intro {
+	background: $primary;
+	background-size: cover;
+	.intro-text {
+		background-color: rgba(255,255,255,0.6);
+	}
+}
+
+
+// Experience Section
+#experience {
+	background-color: $white;
+	padding: 5rem 0;
+	position: relative;
+	&:before {
+		content: '';
+		width: 105%;
+		transform: rotate(-5deg);
+		height: 150px;
+		top: -66px;
+		position: absolute;
+		background-color: $white;
+		z-index: 1;
+	}
+	.container {
+		position: relative;
+		z-index: 2;
+	}
+	.timeline-item {
+		&.left {
+
+		}
+		&.right {
+
+		}
+		p {
+
+		}
+		.circle-logo {
+			border-radius: 50%;
+			
+		}
+	}
+}
+
+
+
+// Repsonsive styles 
+@import "responsive.scss";
