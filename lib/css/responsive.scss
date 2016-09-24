@@ -1,0 +1,48 @@
+@media only (min-width: 601px) {
+	#intro:after {
+		bottom: -8rem;
+	}
+}
+
+
+@media only screen and (min-width: 992px) {
+	#experience {
+		&:before {
+			left: 50%;
+			margin-left: -2px;
+		}
+		.timeline-item {
+			margin: 2rem 0;
+			&:after {
+				content: "";
+				display: table;
+				clear: both;
+			}
+			.timeline-img {
+				left: 50%;
+				background-color: $secondary;
+				width: 6rem;
+				height: 6rem;
+				margin-left: -3rem;
+			}
+			.timeline-text {
+				width: 45%;
+				margin-left: 0;
+			}
+			&:nth-child(even) {
+				.timeline-text {
+					float: right;
+					&:before {
+						top: 2.4rem;
+						right: 100%;
+						left: auto;
+						border-color: transparent;
+						border-left-color: transparent;
+						border-right: 7px solid $primary-dark;
+					}
+				}
+			}
+		}
+	}
+
+}

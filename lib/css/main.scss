@@ -25,6 +25,7 @@ body {
 	background: $white;
 	font-size: 1.6rem;
 	font-family: 'helvetica', arial;
+	overflow-x: hidden;
 }
 
 h1,h2,h3,h4,h5,h6,
@@ -53,14 +54,36 @@ header {
 		}	
 	}
 	nav {
-		background: $white;
+		background: transparent;
 		box-shadow: none;
-		a,
-		div {
-			color: $black;
-			display: inline-block;
+		ul a {
+			font-size: 1.5rem;
+			color: darken($white, 15%);
+			transform: matrix(1, 0, 0, 1, 0, 0);
+			padding: 0;
+			margin: 0 15px;
+			&:after {
+				content: "";
+				width: 100%;
+				background: $white;
+				height: 1px;
+				position: absolute;
+				left: 0;
+				bottom: 1rem;
+				transform-origin: 0 0;
+				transform: scaleX(0);
+				transition: all .3s linear;
+			}
 			&:hover {
-				color: lighten($primary, 10%);
+				color: $white;
+				background: transparent;
+				&:after {
+					transform: scaleX(1);
+				}
+			}
+			hr {
+				width: 0;
+				opacity: 0;
 			}
 		}
 	}
@@ -84,55 +107,175 @@ header {
 	}
 }
 
+main {
+	margin-top: -6.4rem;
+}
 
 // intro section styles 
 
 #intro {
+	padding: 8rem 0;
 	background: $primary;
 	background-size: cover;
-	.intro-text {
-		background-color: rgba(255,255,255,0.6);
+	color: $white;
+	&:after {
+		content: '';
+		width: 150%;
+		transform: rotate(-5deg);
+		height: 15rem;
+		position: absolute;
+		left: -25%;
+		background-color: $white;
+		z-index: 2;
 	}
+	.portrait {
+		margin-top: 3rem;
+		background: $primary-dark;
+		border-radius: 50%;
+		overflow: hidden;
+		transform: scale(1.2);
+		img {
+			position: relative;
+			top: 2rem;
+			transform: scale(0.9);
+		}
+	}
+	.intro-text {
+		margin-top: 4rem;
+		padding: 0 0 4rem;
+		position: relative;
+		z-index: 3;
+		.large,
+		.medium {
+			padding: 0 0 2rem;
+		}
+	}
+
+
 }
 
 
 // Experience Section
 #experience {
 	background-color: $white;
-	padding: 5rem 0;
+	padding: 2rem 0;
+	margin: 2rem 0;
 	position: relative;
+	z-index: 3;
 	&:before {
 		content: '';
-		width: 105%;
-		transform: rotate(-5deg);
-		height: 150px;
-		top: -66px;
 		position: absolute;
-		background-color: $white;
-		z-index: 1;
+		top: 0;
+		left: 18px;
+		height: 100%;
+		width: 4px;
+		background: $primary-dark;
 	}
 	.container {
 		position: relative;
-		z-index: 2;
+		z-index: 3;
 	}
+
+
 	.timeline-item {
-		&.left {
-
+		position: relative;
+		margin: 2rem 0;
+		&:first-child {
+			margin-top: 0;
 		}
-		&.right {
-
+		&:last-child {
+			margin-bottom: 0;
 		}
-		p {
 
-		}
-		.circle-logo {
+		.timeline-img {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 4rem;
+			height: 4rem;
 			border-radius: 50%;
-			
+			img {
+				display: block;
+				position: relative;
+				left: 50%;
+				top: 50%;
+				transform: translate(-50%, -50%);
+			}
+			&.animate {
+				&.hidden {
+					visibility: hidden;
+				}
+				&.bounce {
+					visibility: visible;
+					-webkit-animation: bounce-1 0.6s;
+					-moz-animation: bounce-1 0.6s;
+					animation: bounce-1 0.6s;
+				}
+			}
 		}
+
+		.timeline-text {
+			position: relative;
+			margin-left: 6rem;
+			background: $primary-dark;
+			border-radius: 0.25rem;
+			padding: 1rem;
+			box-shadow: 0 3px 0 $black;
+			float: left;
+			&:before {
+				content: '';
+				position: absolute;
+				top: 2.4rem;
+				left: 100%;
+				height: 0;
+				width: 0;
+				border: 7px solid transparent;
+				border-left: 7px solid $primary-dark;
+			}
+			h2 {
+				color: $white;
+			}
+			p {
+				color: darken($white, 5%);
+			}
+		}
+
 	}
+
+	// .timeline-item {
+	// 	margin: 8rem 0;
+	// 	border-radius: 0.5rem;
+	// 	background-color: $primary-dark;
+	// 	color: $white;
+	// 	padding: 1rem;
+	// 	&.left-item {
+	// 		float: left;
+	// 		padding-right: 4rem;
+	// 	}
+	// 	&.right-item {
+	// 		float: right;
+	// 		padding-left: 4rem;
+	// 	}
+	// 	p {
+
+	// 	}
+	// 	.circle-logo {
+	// 		border-radius: 50%;
+			
+	// 	}
+	// }
+
+	// .timeline-block {
+
+	// }
 }
 
 
 
 // Repsonsive styles 
 @import "responsive.scss";
+
+
+// 
+
+@import "_animations.scss";

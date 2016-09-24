@@ -1,6 +1,9 @@
 	<footer>
 		
 	</footer>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js"></script>
+	<script src="lib/js/main.min.js"></script>
 
 	<script>
 		//google analytics tracking code

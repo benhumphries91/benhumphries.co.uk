@@ -1,23 +1,26 @@
-<header>
+<header class="navbar-fixed">
 	<nav>
-		<div class="container">
-			<a class="menu-toggle hide-on-med-and-up"></a>
-			<a>Logo</a>
-			<div class="hide-on-med-and-down">
-				<a>Portfolio</a>
-				<a>Experience</a>
-				<a>Process</a>
-				<a>Contact</a>
-			</div>
-		</div><!-- END Container -->
-	</nav>
-		<section class="menu-drawer">
-			<ul>
-				<li>Portfolio</li>
-				<li>Experience</li>
-				<li>Process</li>
-				<li>Contact</li>
+		<div class="container nav-wrapper">
+		<a href="#!" class="brand-logo">Logo</a>
+			<ul class="right hide-on-med-and-down">
+				<li><a href="#">Designer</a></li>
+				<li><a href="#">Experience</a></li>
+				<li><a href="#">Portfolio</a></li>
+				<li><a href="#">What I do</a></li>
+				<li><a href="#">Contact</a></li>
 			</ul>
-		</section>
+		</div>
+	</nav>
+
+	<section class="menu-drawer">
+		<ul>
+			<li>Portfolio</li>
+			<li>Experience</li>
+			<li>Process</li>
+			<li>Contact</li>
+		</ul>
+	</section>
+
+
 
 </header>
