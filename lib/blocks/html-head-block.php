@@ -14,7 +14,7 @@
 		<meta property="og:image" content="http://www.benhumphries.co.uk/img/logo.png">
 
 		<link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-		<link type="text/css" rel="stylesheet" href="lib/css/main.css"/>
+		<link type="text/css" rel="stylesheet" href="lib/css/main.css?<?php echo CSS_VERSION; ?>"/>
 
 		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 

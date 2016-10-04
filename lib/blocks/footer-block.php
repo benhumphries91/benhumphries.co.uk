@@ -1,9 +1,15 @@
 	<footer>
-		
+		<p class="copyright small">&copy;<?php echo date('Y');?> BenHumphries.co.uk</p>
+		<a class="contact" onclick="showForm('.contact-form')">
+			<img src="/benhumphries.co.uk/lib/img/icons/contact.svg" alt="Email me">
+		</a>
+		<div class="top">
+			<img src="/benhumphries.co.uk/lib/img/icons/up-arrow.svg" alt="Back to top">
+		</div>
 	</footer>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 	<script src="http://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js"></script>
-	<script src="lib/js/main.min.js"></script>
+	<script src="lib/js/main.min.js?<?php echo JS_VERSION; ?>"></script>
 
 	<script>
 		//google analytics tracking code
