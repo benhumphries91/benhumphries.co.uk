@@ -39,6 +39,11 @@ p {
 	line-height: 1.1;
 }
 
+img {
+	width: 100%;
+	height: auto;
+}
+
 .section-title {
 	background-color: $white;
 	text-align: center;
@@ -306,6 +311,18 @@ main {
 
 }
 
+#process {
+	.process-item {
+		text-align: center;
+		img {
+			border-radius: 50%;
+			width: 20rem;
+			height: 20rem;
+			background: $primary;
+		}
+	}
+}
+
 #contact {
 	background: $primary;
 	background: -moz-linear-gradient(-45deg, $primary 0%, $gradient_dark 100%);
@@ -351,14 +368,18 @@ footer {
 		display: none;
 		position: fixed;
 		z-index: 4;
-		bottom: 50px;
-		width: 24px;
-		height: 23px;
+		bottom: 25px;
+		width: 40px;
+		height: 40px;
 		display: block;
 		cursor: pointer;
+		border-radius: 50%;
+		background-color: $primary-dark;
+		box-shadow: 0 0 0 4px darken($primary-dark, 10%), inset 0 2px 0 rgba(0, 0, 0, 0.08), 0 3px 0 4px rgba(0, 0, 0, 0.05);
 	}
 	.contact {
 		left: 50px;
+		padding: 0.5rem;
 	}
 	.top {
 		right: 50px;

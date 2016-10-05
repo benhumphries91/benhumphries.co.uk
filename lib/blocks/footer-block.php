@@ -1,7 +1,7 @@
 	<footer>
 		<p class="copyright small">&copy;<?php echo date('Y');?> BenHumphries.co.uk</p>
 		<a class="contact" onclick="showForm('.contact-form')">
-			<img src="/benhumphries.co.uk/lib/img/icons/contact.svg" alt="Email me">
+			<img src="/benhumphries.co.uk/lib/img/icons/mail.svg" alt="Email me">
 		</a>
 		<div class="top">
 			<img src="/benhumphries.co.uk/lib/img/icons/up-arrow.svg" alt="Back to top">

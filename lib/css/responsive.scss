@@ -7,10 +7,6 @@
 
 @media only screen and (min-width: 992px) {
 	#experience {
-		&:before {
-			left: 50%;
-			margin-left: -2px;
-		}
 		.timeline-item {
 			&:after {
 				content: "";

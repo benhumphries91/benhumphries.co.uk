@@ -2,8 +2,6 @@
 // constants for generic settings accross the website
 define('PHP_ROOT', dirname(getcwd()));
 
-echo PHP_ROOT;
-
 require_once(PHP_ROOT.'/inc/constants.php');
 require_once(PHP_ROOT.'/inc/functions.php');
 
@@ -63,7 +61,7 @@ $vars['success'] = array(
 $contact_date = date('Y-m-d H:i:s');
 
 // no errors and success message has been created send an email to sales team
-if ($vars['success'] !== NULL && count($vars['errors']) < 1) {
+if ($vars['success'] != NULL && count($vars['error']) < 1) {
 	$subject = ucfirst($params['fullname']) .' Sent a Message';
 	$message = "Full Name: $params[fullname] <br /><br />
 		Email: $params[email]<br /><br />

@@ -15,4 +15,7 @@ define('SITE_NAME', 'Ben Humphries.co.uk');
 define('JS_VERSION', '0.1.0');
 define('CSS_VERSION', '0.1.0');
 
+
+date_default_timezone_set("Europe/London");
+
 ?>
