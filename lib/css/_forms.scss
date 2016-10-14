@@ -1,36 +1,8 @@
-// // general form styles
-// .form-control {
-// 	border-radius: 1px;
-// 	&:focus {
-// 		border-color: lighten($error, 10%);
-// 		outline: 0;
-// 		-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(178,31,36,0.6);
-// 		box-shadow: inset 4px 4px 1px rgba(0,0,0,.075), 0 0 8px rgba(178,31,36,0.6);
-// 	}
-// }
-
-// .form-group {
-// 	position: relative;
-// 	label {
-// 		line-height: 35px;
-// 		position: absolute;
-// 		left: 0;
-// 		font-size: 0.8rem;
-// 		opacity: 0;
-// 		top: 10px;
-// 		transition: .3s top ease, .3s opacity ease;
-// 	}
-
-// 	input:not(.input-error):focus + label {
-// 		opacity: 1;
-// 		top: -25px;
-// 	}
-
-// }
-
 .input-field {
 	label {
 		opacity: 1;
+		top: 0;
+		left: 0;
 	}
 	input:focus + label {
 		font-size: 0.8rem;
@@ -47,94 +19,79 @@
 	line-height: 2.7rem
 }
 
-.dismiss,
-.close {
-	cursor: pointer;
-	color: rgba(255, 255, 255, 0.5);
-	&:hover {
-		color: rgba(255, 255, 255, 0.75);
-	}
-}
-
-.input-error {
-	border-color: lighten($error, 10%)!important;
-	padding-left: 20px;
-	position: relative;
-	&:focus {
-		outline: 1px solid rgba(178, 31, 36, 0.3)!important;
-		outline: 0;
-	}
-	&.form-area {
-		margin-top: 50px;
-		padding: 0;
-		.error-detail {
-			width: 100%;
-			font-size: 1rem;
-			top: -48px;
-			padding: 0;
-			&:before {
-				display: none;
-			}
+form {
+	.validation-error {
+		border-color: lighten($error, 10%)!important;
+		&:focus {
+			box-shadow: none !important;
 		}
 	}
+
+	.error-detail {
+		position: absolute;
+		left: 0;
+		bottom: 0;
+		color: lighten($error, 10%);
+		font-size: 0.8rem;
+	}
 }
 
-.error-detail {
-	position: absolute;
-	left: 0;
-	top: -20px;
-	padding: 0 6px;
-	color: lighten($error, 10%);
-	font-size: 0.8rem;
-	&:before {
-		content: '!';
-		display: block;
-		color: lighten($error, 10%);
-		position: absolute;
-		left: 8px;
-		top: 21px;
-		font-size: 1.5rem;
-		width: 15px;
+.form-area {
+	button {
+		line-height: 1;
+		background-color: $primary-dark;
+		text-transform: capitalize;
+		&:hover {
+			background-color: $primary;
+		}
 	}
 }
 
 .success {
 	padding-top: 10px;
-	font-weight: bold;
 	display: block;
-	text-align: center;
+	overflow: hidden;
+	.circle-wrapper {
+		overflow: hidden;
+		padding: 2rem;
+	}
+	.success-icon {
+		position: relative;
+		overflow: hidden;
+		margin: 1rem;
+		width: 12rem;
+		height: 12rem;
+		border-radius: 50%;
+		background: $primary;
+		box-shadow: 6rem -6rem 0 0.2rem rgba(255,255,255,0.95), -6rem -6rem 0 0.2rem rgba(255,255,255,0.95), -6rem 6rem 0 0.2rem rgba(255,255,255,0.95), 6rem 6rem 0 0.2rem rgba(255,255,255,0.95), 0 0 0 0.3rem rgba(255,255,255,0.95);
+		margin: 0 auto;
+		z-index: -1;
+		@include animation('form-success 1s ease 1 forwards');
+	}
+	h2,
+	p {
+		z-index: 2;
+		text-align: center;
+	}
 }
-
 
 .lightbox > .hidden-form {
 	display: block;
+	max-width: 50rem;
+	padding: 4rem 0;
 	opacity: 1;
 	transform: scale(1);
-	transition: all 5s ease-in-out;
+	@include transition(all 5s ease-in-out);
 }
 
 .hidden-form {
 	display: none;
 	.input-field {
 		position: relative;
-		margin: 0 0 25px;
+		margin: 0 0 2rem;
 		input:focus {
 			border-color: lighten($primary, 10%);
 			outline: 0;
-		}
-	}
-}
-
-.contact-form {
-	.question-panel {
-		background-color: $black;
-		.title-top {
-			padding: 15px 15px 15px 0;
-			color: $white;
-			margin: 0;
-		}
-		.question-text {
-			margin-bottom: 25px;
 		}
 	}
 }

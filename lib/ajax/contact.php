@@ -55,14 +55,14 @@ if (count($vars['error']) > 0 ) {
 
 $vars['success'] = array(
 	"title" => "Thank You",
-	"message" => "Your message was sent successfully."
+	"message" => "<p>Your message was sent successfully.</p><p>I will respond to your e-mail shortly.</p>"
 	);
 
 $contact_date = date('Y-m-d H:i:s');
 
 // no errors and success message has been created send an email to sales team
 if ($vars['success'] != NULL && count($vars['error']) < 1) {
-	$subject = ucfirst($params['fullname']) .' Sent a Message';
+	$subject = ucfirst($params['fullname']) .' Sent a Message - www.benhumphries.co.uk';
 	$message = "Full Name: $params[fullname] <br /><br />
 		Email: $params[email]<br /><br />
 		Phone: $params[phone]<br /><br />

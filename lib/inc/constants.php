@@ -1,12 +1,12 @@
 <?php
-
-define('SITE_MODE', 'Test');
-
+define('SITE_MODE', 'test');
 if (SITE_MODE == 'Live' ) {
-	define('WEB_ROOT', 'www.benhumphries.co.uk/');
+	define('WEB_ROOT', 'http://www.benhumphries.co.uk');
 } else {
-	define('WEB_ROOT', '/Library/WebServer/Documents/benhumphries.co.uk/');
+	define('WEB_ROOT', 'http://localhost/Library/WebServer/Documents/benhumphries.co.uk');
 }
+
+define('PHP_ROOT', getcwd());
 
 define('GEN_EMAIL', 'ben_humphries@hotmail.co.uk');
 

@@ -1,13 +1,15 @@
 <header class="navbar-fixed">
-	<nav>
+	<nav class="z-depth-2">
 		<div class="nav-wrapper">
-		<a href="#!" class="brand-logo">Logo</a>
+		<a href="#intro" class="brand-logo">
+			<?php echo file_get_contents(WEB_ROOT."/lib/img/logo.svg"); ?>
+		</a>
 			<ul id="top-nav" class="right hide-on-med-and-down">
-				<li><a href="#">Designer</a></li>
-				<li><a href="#">Experience</a></li>
-				<li><a href="#">Portfolio</a></li>
-				<li><a href="#">What I do</a></li>
-				<li><a href="#">Contact</a></li>
+				<li><a href="#intro">Home</a></li>
+				<li><a href="#portfolio">Portfolio</a></li>
+				<li><a href="#experience">Experience</a></li>
+				<li><a href="#process">How I Create</a></li>
+				<li><a href="#contact">Contact</a></li>
 			</ul>
 			<a id="nav-icon" class="hide-on-large-only">
 				<span></span>
@@ -19,11 +21,11 @@
 
 	<section class="menu-drawer">
 		<ul>
-			<li><a href="#">Designer</a></li>
-			<li><a href="#">Experience</a></li>
-			<li><a href="#">Portfolio</a></li>
-			<li><a href="#">What I do</a></li>
-			<li><a href="#">Contact</a></li>
+			<li><a href="#intro">Home</a></li>
+			<li><a href="#portfolio">Portfolio</a></li>
+			<li><a href="#experience">Experience</a></li>
+			<li><a href="#process">How I Create</a></li>
+			<li><a href="#contact">Contact</a></li>
 		</ul>
 	</section>
 

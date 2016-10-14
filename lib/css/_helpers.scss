@@ -17,10 +17,46 @@ $gradient_dark: #335357;
 
 $error: #E53935;
 
+// Mixins
+
+@mixin keyframes($animation-name) {
+	@-webkit-keyframes #{$animation-name} {
+		@content;
+	}
+	@-moz-keyframes #{$animation-name} {
+		@content;
+	}
+	@-ms-keyframes #{$animation-name} {
+		@content;
+	}
+	@-o-keyframes #{$animation-name} {
+		@content;
+	}
+	@keyframes #{$animation-name} {
+		@content;
+	}
+}
+
+@mixin animation($str) {
+	-webkit-animation: #{$str};
+	-moz-animation: #{$str};
+	-ms-animation: #{$str};
+	-o-animation: #{$str};
+	animation: #{$str};      
+}
+
+
+@mixin transition($args...) {
+  -webkit-transition: $args;
+  -moz-transition: $args;
+  -ms-transition: $args;
+  -o-transition: $args;
+  transition: $args;
+}
 
 $small: 1.5rem;
-$medium: 2.5rem;
-$large: 4.2rem;
+$medium: 2.4rem;
+$large: 3.2rem;
 
 
 .large {
@@ -63,31 +99,36 @@ $large: 4.2rem;
 	min-width: 100vw;
 	min-height: 100vh;
 }
-
-.angle {
-	transform: rotate(-5deg);
-	-moz-transform: rotate(-5deg);
-	-ms-transform: rotate(-5deg);
-	-webkit-transform: rotate(-5deg);
-	-o-transform: rotate(-5deg);
-	transform-origin: left center;
+.skew:after {
+	content: '';
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	z-index: -1;
+	top: 0;
+	bottom: 0;
+	transform-origin: left bottom;
+	transform: skewY(2deg);
+}
+.skew-gradient:after {
+	background: $primary;
+	background: -moz-linear-gradient(-45deg, $primary 0%, $gradient_dark 100%);
+	background: -webkit-linear-gradient(-45deg, $primary 0%,$gradient_dark 100%);
+	background: linear-gradient(135deg, $primary 0%,$gradient_dark 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$primary', endColorstr='$gradient_dark',GradientType=1 );
 }
 
-.straighten {
-	transform: rotate(5deg);
-	-moz-transform: rotate(5deg);
-	-ms-transform: rotate(5deg);
-	-webkit-transform: rotate(5deg);
-	-o-transform: rotate(5deg);
-	transform-origin: left center;
+.skew-white:after {
+	background: $white;
 }
 
 
 .btn {
 	border-radius: 0.5rem;
-	box-shadow: 2px 3px 2px $black;
-	padding: 1rem 2rem ;
-	color: $white;
+	box-shadow: 2px 3px 2px rgba(0,0,0,0.3);
+	padding: 0 3.3rem ;
+	color: $text-light;
+	height: 4.5rem;
 	&.btn-primary {
 		background-color: $primary;
 		&:hover {
@@ -121,14 +162,7 @@ $large: 4.2rem;
 	position: fixed;
 	top: 0;
 	left: 0;
-	z-index: 1;
-	display: none;
-	&.active {
-		display: block;
-	}
-	&.lb {
-		background-color: $black;
-	}
+	z-index: 10;
 }
 
 
@@ -137,40 +171,56 @@ $large: 4.2rem;
 	box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.3),
 		2px 2px 5px rgba(0, 0, 0, 0.3),
 		6px 6px 0px rgba(0, 0, 0, 0.2);
-	background-color: #fff;
+	background-color: rgba(255,255,255,0.95);
 	position: fixed;
-	top: 30px;
+	top: 0;
 	right: 0;
 	left: 0;
-	width: 650px;
-	max-width: 100%;
-	height: auto!important;
+	width: 100%;
+	height: 100%;
 	margin: auto;
 	z-index: 9999999;
-	border-radius: 3px;
-	transition: all 1s ease-in-out;
-	-webkit-animation: pop 1s ease-in-out;
-	-moz-animation: pop 1s ease-in-out;
-	animation: pop 1s ease-in-out;
+	@include transition (all 1s ease-in-out);
+	@include animation('fade-in 1s ease 1 forwards');
 	&.remove {
 		opacity: 0;
-		transition: all 1s ease-in-out;
+		@include transition(all 1s ease-in-out);
 		transform: scale(.1);
 	}
 	.close {
-		font-size: 1.8rem;
 		cursor: pointer;
+		color: rgba(255, 255, 255, 0.75);
+		width: 4.4rem;
+		height: 4.4rem;
 		position: absolute;
-		right: 15px;
-		top: 10px;
-		z-index: 1;
-		opacity: 0.4;
-		text-shadow: none;
-		float: none;
+		top: 1rem;
+		right: -0.35rem;
+		opacity: 0.7;
+		@include transition(all .3s ease-in-out);
 		&:hover {
-			opacity: 0.6;
+			opacity: 1;
+		}
+		span {
+			height: 0.4rem;
+			border-radius: 2rem;
+			cursor: pointer;
+			background-color: $primary-dark;
+			width: 80%;
+			display: block;
+			position: absolute;
+			top: 50%;
+			left: 0.6rem;
+			&:nth-of-type(1) {
+				transform: rotate(45deg) translate(1px, 3px);
+				transform-origin: top;
+			}
+			&:nth-of-type(2) {
+				transform: rotate(-45deg) translate(-1px, -1px);
+				transform-origin: bottom;
+			}
 		}
 	}
+
 	.body {
 		margin: 0;
 		position: initial;

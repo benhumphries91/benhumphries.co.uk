@@ -1,11 +1,99 @@
 @media only (min-width: 601px) {
-	#intro:after {
-		bottom: -8rem;
+	header nav .brand-logo {
+		max-height: 6.4rem;
+		#logo {
+			max-height: 6.4rem;
+		}	
+	}
+	.menu-drawer {
+		top: 6.4rem;
+	}
+	#intro {
+		padding: 15rem 0 5rem;
+		.intro-text {
+			margin-top: 4rem;
+			.large,
+			.medium {
+				padding: 0 0 2rem;
+			}
+			.medium {
+				font-size: 2.4rem;
+			}
+			.occupation-text{
+				.left-shift {
+					left: -3rem;
+				}
+				.large {
+					font-size: 3.4rem
+				}
+			}
+		}
+		.scroll-down {
+			bottom: 5rem;
+		}
 	}
 }
 
 
 @media only screen and (min-width: 992px) {
+	// mobile Navigation
+	.menu-drawer {
+		width: 30%;
+		right: -30%;
+		&.active {
+			right: 0
+		}
+	}
+
+	.section {
+		padding: 10rem 0 3rem;
+	}
+
+	#intro {
+		padding: 15rem 0 5rem;
+		.intro-text {
+			text-align: left;
+			.large,
+			.medium {
+				padding: 0 0 2rem;
+			}
+			.medium {
+				font-size: 2.4rem;
+			}
+			.occupation-text {
+				position: relative;
+				.left-shift {
+					position: absolute;
+					left: -3rem;
+					top: 40%;
+					transform: translateY(-50%);
+				}
+				.large {
+					font-size: 4.4rem
+				}
+			}
+		}
+		.scroll-down {
+			bottom: 5rem;
+		}
+	}
+
+	.intro-text {
+		.occupation-text {
+			position: relative;
+			.large {
+				font-size: 2.3rem
+			}
+			.left-shift {
+				position: absolute;
+				left: -2rem;
+				top: 40%;
+				transform: translateY(-50%);
+			}
+		}
+	}
+
+
 	#experience {
 		.timeline-item {
 			&:after {
@@ -14,11 +102,11 @@
 				clear: both;
 			}
 			.timeline-img {
+				position: absolute;
+				top: 25%;
 				left: 50%;
-				background-color: $secondary;
 				width: 6rem;
 				height: 6rem;
-				margin-left: -3rem;
 			}
 			.timeline-text {
 				width: 45%;
@@ -29,6 +117,13 @@
 					float: right;
 				}
 			}
+		}
+	}
+
+	footer {
+		.contact,
+		.top {
+			display: block;
 		}
 	}
 

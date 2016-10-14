@@ -179,4 +179,53 @@
 	}
 }
 
+@include keyframes(form-success) {
+	0% {
+		box-shadow: 6rem -6rem 0 0 rgba(255,255,255,0.95), -6rem -6rem 0 0.2rem rgba(255,255,255,0.95), -6rem 6rem 0 0.2rem rgba(255,255,255,0.95), 6rem 6rem 0 0.2rem rgba(255,255,255,0.95), 0 0 0 0.3rem rgba(255,255,255,0.95);
+	}
+	25% {
+		box-shadow: 0 -12.5rem 0 0.2rem rgba(255,255,255,0.95), -6rem -6rem 0 0.2rem rgba(255,255,255,0.95), -6rem 6rem 0 0.2rem rgba(255,255,255,0.95), 6rem 6rem 0 0.2rem rgba(255,255,255,0.95), 0 0 0 0.3rem $primary-dark;
+	}
+	50% {
+		box-shadow: 0 -12.5rem 0 0.2rem rgba(255,255,255,0.95), -12.5rem 0 0 0.2rem rgba(255,255,255,0.95), -6rem 6rem 0 0.2rem rgba(255,255,255,0.95), 6rem 6rem 0 0.2rem rgba(255,255,255,0.95), 0 0 0 0.3rem $primary-dark;
+	}
+	75% {
+		box-shadow: 0 -12.5rem 0 0.2rem rgba(255,255,255,0.95), -12.5rem 0 0 0.2rem rgba(255,255,255,0.95), 0 12.5rem 0 0.2rem rgba(255,255,255,0.95), 6rem 6rem 0 0.2rem rgba(255,255,255,0.95), 0 0 0 0.3rem $primary-dark;
+	}
+	100% {
+		box-shadow: 0 -12.5rem 0 0.2rem rgba(255,255,255,0.95), -12.5rem 0 0 0.2rem rgba(255,255,255,0.95), 0 12.5rem 0 0.2rem rgba(255,255,255,0.95), 12.5rem 0 0 0.2rem rgba(255,255,255,0.95), 0 0 0 0.3rem $primary-dark;
+	} 
+}
+
+
+@include keyframes(cross) {
+	0% {
+		left: 6rem;
+		width: 0;
+	}
+	100% {
+		left: 10px;
+		width: 100px;
+	}
+}
+
+@include keyframes(mouse-scroll) {
+	from {
+		transform: translateY(0);
+		opacity: 1;
+	}
+	to {
+		transform: translateY(0.7rem);
+		opacity: 0;
+	}
+}
+
+@include keyframes(scroll-arrow) {
+	from {
+		opacity: 1;
+	}
+	to {
+		opacity: 0;
+	}
+}
 
