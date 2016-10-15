@@ -72,7 +72,7 @@ if ($vars['success'] != NULL && count($vars['error']) < 1) {
 	// send email
 	$headers  = "MIME-Version: 1.0\r\n";
 	$headers .= "Content-type: text/html; charset=utf-8\r\n";
-	$headers .= "From: ".SITE_NAME." <".GEN_EMAIL.">\r\n";
+	$headers .= "From: ".SITE_NAME." <ben@benhumphries.co.uk>\r\n";
 
 	mail(GEN_EMAIL, $subject, $message, $headers);
 

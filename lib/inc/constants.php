@@ -8,9 +8,9 @@ if (SITE_MODE == 'Live' ) {
 
 define('PHP_ROOT', getcwd());
 
-define('GEN_EMAIL', 'ben_humphries@hotmail.co.uk');
+define('GEN_EMAIL', 'ben@benhumphries.co.uk');
 
-define('SITE_NAME', 'Ben Humphries.co.uk');
+define('SITE_NAME', 'BenHumphries.co.uk');
 
 define('JS_VERSION', '0.1.0');
 define('CSS_VERSION', '0.1.0');
