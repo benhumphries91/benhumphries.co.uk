@@ -6,7 +6,7 @@
 		</a>
 			<ul id="top-nav" class="right hide-on-med-and-down">
 				<li><a href="#intro">Home</a></li>
-				<li><a href="#portfolio">Portfolio</a></li>
+				<li><a href="#portfolio">Work</a></li>
 				<li><a href="#experience">Experience</a></li>
 				<li><a href="#process">How I Create</a></li>
 				<li><a href="#contact">Contact</a></li>
@@ -22,7 +22,7 @@
 	<section class="menu-drawer">
 		<ul>
 			<li><a href="#intro">Home</a></li>
-			<li><a href="#portfolio">Portfolio</a></li>
+			<li><a href="#portfolio">Work</a></li>
 			<li><a href="#experience">Experience</a></li>
 			<li><a href="#process">How I Create</a></li>
 			<li><a href="#contact">Contact</a></li>

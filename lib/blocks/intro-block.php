@@ -3,10 +3,11 @@
 		<div class="row">
 			<div class="portrait col s6 push-s3 m6 push-m3 l5 push-l7">
 				<img class="responsive-img" src="<?php echo WEB_ROOT; ?>/lib/img/intro/ben@1x.png" 
-				srcset="<?php echo WEB_ROOT; ?>/lib/img/intro/ben@1x.png 600w,
-					<?php echo WEB_ROOT; ?>/lib/img/intro/ben@2x.png 1200w,
+				srcset="<?php echo WEB_ROOT; ?>/lib/img/intro/ben@1x.png 400w,
+					<?php echo WEB_ROOT; ?>/lib/img/intro/ben@2x.png 800w,
+					<?php echo WEB_ROOT; ?>/lib/img/intro/ben@3x.png 1200w,
 					<?php echo WEB_ROOT; ?>/lib/img/intro/ben@2x.png 2x,
-					<?php echo WEB_ROOT; ?>/lib/img/intro/ben@2x.png 3x"
+					<?php echo WEB_ROOT; ?>/lib/img/intro/ben@3x.png 3x"
 				sizes="100vw"
 				alt="Ben Humphries">
 			</div>

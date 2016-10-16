@@ -31,10 +31,7 @@
 		<meta name="application-name" content="Ben Humphries.co.uk">
 		<meta name="theme-color" content="#ffffff">
 
-		<meta name="google-site-verification" content="QHSGuAhaQWPp0yiQvq_6_Fidb6NJNfpkmVS09Xd0K98" />
-
-		<!-- <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> -->
-		<link href="https://fonts.googleapis.com/css?family=Raleway|Source+Sans+Pro" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Lato|Open+Sans" rel="stylesheet">
 		<link type="text/css" rel="stylesheet" href="lib/css/main.css?<?php echo CSS_VERSION; ?>" media="all"/>
 
 

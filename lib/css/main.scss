@@ -4,8 +4,11 @@
 // include materialize
 @import "materialize/materialize.scss";
 
+// @import "_fonts.scss";
+
 // get all my helper classes
 @import "_helpers.scss";
+
 
 
 // HTML defaults
@@ -22,13 +25,13 @@ html {
 body {
 	background: $white;
 	font-size: 1.6rem;
-	font-family: 'Raleway', sans-serif;
+	font-family: 'Lato', sans-serif;
 	overflow-x: hidden;
 }
 
 h1,h2,h3,h4,h5,h6,
 .h1,.h2,.h3,.h4,.h5,.h6 {
-	font-family: 'Source Sans Pro', sans-serif;
+	font-family: 'Open Sans', sans-serif;
 	font-weight: bold;
 	margin: 1rem 0;
 }

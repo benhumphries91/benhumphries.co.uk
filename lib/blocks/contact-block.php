@@ -4,25 +4,25 @@
 		<div class="row">
 			<div class="col s3 m2 offset-m2">
 				<a class="contact" onclick="showForm('.contact-form')">
-					<img src="<?php echo WEB_ROOT; ?>/lib/img/icons/email.svg">
+					<img src="<?php echo WEB_ROOT; ?>/lib/img/icons/email.svg" alt="Email Icon">
 				</a>
 			</div>
 
 			<div class="col s3 m2">
 				<a class="linkedin" href="https://uk.linkedin.com/in/humphriesben" target="_blank">
-					<img src="<?php echo WEB_ROOT; ?>/lib/img/icons/linkedin.svg">
+					<img src="<?php echo WEB_ROOT; ?>/lib/img/icons/linkedin.svg" alt="LinkedIn Logo">
 				</a>
 			</div>
 
 			<div class="col s3 m2">
 				<a class="github" href="https://github.com/benhumphries91" target="_blank">
-					<img src="<?php echo WEB_ROOT; ?>/lib/img/icons/github.svg">
+					<img src="<?php echo WEB_ROOT; ?>/lib/img/icons/github.svg" alt="Github Logo">
 				</a>
 			</div>
 
 			<div class="col s3 m2">
 				<a class="behance" href="https://www.behance.net/ben_humphra34f" target="_blank">
-					<img src="<?php echo WEB_ROOT; ?>/lib/img/icons/behance.svg">
+					<img src="<?php echo WEB_ROOT; ?>/lib/img/icons/behance.svg" alt="Behance Logo">
 				</a>
 			</div>
 		</div>
