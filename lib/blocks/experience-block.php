@@ -71,7 +71,7 @@
 							<p class='dates'>".$experience['dates']."</p>
 						</div>";
 							
-						echo "<div class='timeline-text z-depth-1'>
+						echo "<div class='timeline-text'>
 							<h3>".$experience['subtitle']."</h3>";
 
 							if (is_array($experience['text'])) {

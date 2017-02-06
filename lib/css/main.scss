@@ -55,21 +55,21 @@ img {
 header {
 	background-color: transparent;
 	nav {
-		background: $white;
+		background: $primary-dark;
 		box-shadow: none;
 		padding: 0 5%;
 		#top-nav {
 			@include transition(all .3s ease-in-out);
 			a {
 				font-size: 1.5rem;
-				color: $primary-dark;
+				color: rgba(255,255,255,0.75);
 				transform: matrix(1, 0, 0, 1, 0, 0);
 				padding: 0;
 				margin: 0 15px;
 				&:after {
 					content: "";
 					width: 100%;
-					background: $white;
+					background: rgba(255,255,255,0.6);
 					height: 1px;
 					position: absolute;
 					left: 0;
@@ -79,7 +79,7 @@ header {
 					@include transition(all .3s linear);
 				}
 				&:hover {
-					color: $primary;
+					color: $white;
 					background: transparent;
 					&:after {
 						transform: scaleX(1);
@@ -94,12 +94,12 @@ header {
 		.brand-logo {
 			left: initial;
 			transform: translateX(0);
-			color: $primary-dark;
+			color: rgba(255,255,255,0.8);
 			max-width: 5rem;
 			max-height: 5.4rem;
 			cursor: pointer;
 			#logo {
-				fill: $primary;
+				fill: rgba(255,255,255,0.8);
 				width: 100%;
 				height: auto;
 				max-height: 5.6rem;
@@ -121,7 +121,7 @@ header {
 				height: 0.4rem;
 				border-radius: 2rem;
 				cursor: pointer;
-				background-color: $primary-dark;
+				background-color: rgba(255,255,255,0.8);
 				width: 100%;
 				@include transition(all .5s cubic-bezier(0.5,0,0,1));
 				&:nth-of-type(1) {
@@ -130,6 +130,9 @@ header {
 				&:nth-of-type(2) {
 					margin-top: 20px;
 				}
+			}
+			&:hover span {
+				background-color: rgba(255,255,255,1);
 			}
 			&.active {
 				span {
