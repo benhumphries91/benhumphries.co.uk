@@ -1,7 +1,7 @@
 <section id="experience" class="fullscreen skew skew-gradient">
 	<div class="container">
 		<div class="row">
-			<h2 class="section-title">Timeline</h2>
+			<h2 class="section-title">Experience</h2>
 		</div>
 		<div class="row timeline">
 			<?php 
@@ -34,9 +34,9 @@
 
 
 				$experience_ar[3]['subtitle'] = 'Immediate Service Excellance Award';
-				$experience_ar[3]['text'] = "I was awarded the &lsquo;Immediate Service Excellence Award&rsquo; in recognition for the time, effort and expertise that I put in to implementing a portal website for a contractor.";
+				$experience_ar[3]['text'] = "I was awarded the Steria &lsquo;Immediate Service Excellence Award&rsquo; in recognition for the time, effort and expertise that I put in to implementing a portal website for a contractor while at Steria Ltd.";
 				$experience_ar[3]['dates'] = '2012';
-				$experience_ar[3]['title'] = 'Steria Ltd';
+				$experience_ar[3]['title'] = 'Award';
 				// $experience_ar[3]['logo'] = 'src="'.WEB_ROOT.'/lib/img/icons/award.svg" alt="Awards"';
 
 				$experience_ar[4]['subtitle'] = 'Steria Ltd';
