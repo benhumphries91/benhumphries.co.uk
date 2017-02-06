@@ -294,11 +294,12 @@ section {
 			content: '';
 			position: absolute;
 			top: 0;
-			left: 50%;
-			margin-left: -2px;
+			left: 1rem;
+			margin-left: -5px;
 			height: 100%;
-			width: 4px;
-			background: rgba(255,255,255, 0.7);
+			width: 10px;
+			background: rgba(255,255,255, 0.4);
+			border-radius: 6px;
 		}
 	}
 	.timeline-item {
@@ -313,54 +314,51 @@ section {
 			clear: both;
 		}
 
+		h3 {
+			font-size: 2rem;
+			margin: 0;
+			padding: 0.35rem 0;
+		}
+
 		.timeline-img {
 			position: relative;
 			top: 0;
 			transform: translateX(-50%);
-			left: 50%;
-			width: 6rem;
+			left: 1rem;
+			width: 3rem;
 			right: 0;
-			height: 6rem;
+			height: 3rem;
 			border-radius: 50%;
-			background-color: lighten($primary, 5%);
-			margin-bottom: 3rem;
+			background-color: #d0dfe1;
 			border: $primary-dark 3px solid;
-			img {
-				display: block;
-				position: relative;
-				left: 50%;
-				top: 50%;
-				transform: translate(-50%, -50%);
-				width: 100%;
-				height: auto;
-			}
-			&.animate {
-				&.hidden {
-					visibility: hidden;
-				}
-				&.bounce {
-					visibility: visible;
-					-webkit-animation: bounce-1 0.6s;
-					-moz-animation: bounce-1 0.6s;
-					animation: bounce-1 0.6s;
-				}
-			}
+			float: left;
 		}
 
 		.timeline-text {
+			margin-left: 3rem;
 			position: relative;
-			background-color: $primary-dark;
 			padding: 1rem;
-			float: left;
-			text-align: center;
+			text-align: left;
 			border-radius: 0.7rem;
+			border: 2px solid rgba(255,255,255,0.4);
+			color: rgba(255,255,255,0.4);
 			h3 {
-				color: $white;
-				margin: 0.5rem 0;
+				font-size: 1.6rem;
+				color: rgba(255,255,255,0.6);
+			}
+			p {
+				margin: 0.4rem 0;
+			}
+		}
+
+		.timeline-title {
+			margin: 0 0 1.5rem 3rem;
+			h3 {
+				color: rgba(255,255,255,0.6);
 			}
 			p {
 				margin: 0.5rem 0;
-				color: darken($white, 5%);
+				color: rgba(255,255,255,0.4);
 			}
 		}
 

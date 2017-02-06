@@ -32,7 +32,8 @@
 		<meta name="theme-color" content="#ffffff">
 
 		<link href="https://fonts.googleapis.com/css?family=Lato|Open+Sans" rel="stylesheet">
-		<link type="text/css" rel="stylesheet" href="lib/css/main.css?<?php echo CSS_VERSION; ?>" media="all"/>
+		<!-- <link type="text/css" rel="stylesheet" href="lib/css/main.css?<?php echo CSS_VERSION; ?>" media="all"/> -->
+		<link type="text/css" rel="stylesheet" href="lib/css/main.css" media="all"/>
 
 
 	</head>

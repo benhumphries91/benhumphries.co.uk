@@ -95,6 +95,10 @@
 
 
 	#experience {
+		.timeline:before {
+			left: 50%;
+			margin-left: -5px;
+		}
 		.timeline-item {
 			&:after {
 				content: "";
@@ -103,18 +107,33 @@
 			}
 			.timeline-img {
 				position: absolute;
-				top: 25%;
 				left: 50%;
-				width: 6rem;
-				height: 6rem;
+				width: 3rem;
+				height: 3rem;
 			}
 			.timeline-text {
 				width: 45%;
 				margin-left: 0;
 			}
+			.timeline-title {
+				width: 45%;
+			}
+			&:nth-child(odd) {
+				.timeline-text {
+					float: left;
+				}
+				.timeline-title {
+					float: right;
+				}
+			}
 			&:nth-child(even) {
 				.timeline-text {
 					float: right;
+				}
+				.timeline-title {
+					float: left;
+					text-align: right;
+					padding-right: 3rem;
 				}
 			}
 		}
