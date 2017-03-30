@@ -1,67 +1,43 @@
-# -FrontPage-
+# Compiled source #
+###################
+*.com
+*.class
+*.dll
+*.exe
+*.o
+*.so
 
-IndexIgnore .htaccess */.??* *~ *# */HEADER* */README* */_vti*
+# Packages #
+############
+# it's better to unpack these files and commit the raw source
+# git has its own built in compression methods
+*.7z
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
 
-<Limit GET POST>
-order deny,allow
-deny from all
-allow from all
-</Limit>
-<Limit PUT DELETE>
-order deny,allow
-deny from all
-</Limit>
-AuthName benhumphries.co.uk
-AuthUserFile /home/benhumph/public_html/_vti_pvt/service.pwd
-AuthGroupFile /home/benhumph/public_html/_vti_pvt/service.grp
+# Logs and databases #
+######################
+*.log
+*.sql
+*.sqlite
 
+# OS generated files #
+######################
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
 
-
-## EXPIRES CACHING ##
-<IfModule mod_expires.c>
-ExpiresActive On
-ExpiresByType image/jpg "access plus 1 month"
-ExpiresByType image/jpeg "access plus 1 month"
-ExpiresByType image/gif "access plus 1 month"
-ExpiresByType image/png "access plus 1 month"
-ExpiresByType image/svg+xml "access plus 1 month"
-ExpiresByType image/svg  "access plus 1 month"
-ExpiresByType text/css "access plus 1 month"
-ExpiresByType application/pdf "access plus 1 month"
-ExpiresByType application/javascript "access 2 days"
-ExpiresByType application/x-javascript "access 2 days"
-ExpiresByType application/x-shockwave-flash "access plus 1 month"
-ExpiresByType image/x-icon "access plus 1 year"
-ExpiresDefault "access plus 2 days"
-</IfModule>
-## EXPIRES CACHING ##
-
-
-<IfModule mod_deflate.c>
-  AddOutputFilterByType DEFLATE text/html
-  AddOutputFilterByType DEFLATE text/css
-  AddOutputFilterByType DEFLATE text/javascript
-  AddOutputFilterByType DEFLATE text/xml
-  AddOutputFilterByType DEFLATE text/plain
-  AddOutputFilterByType DEFLATE image/x-icon
-  AddOutputFilterByType DEFLATE image/svg+xml
-  AddOutputFilterByType DEFLATE application/rss+xml
-  AddOutputFilterByType DEFLATE application/javascript
-  AddOutputFilterByType DEFLATE application/x-javascript
-  AddOutputFilterByType DEFLATE application/xml
-  AddOutputFilterByType DEFLATE application/xhtml+xml
-  AddOutputFilterByType DEFLATE application/x-font
-  AddOutputFilterByType DEFLATE application/x-font-truetype
-  AddOutputFilterByType DEFLATE application/x-font-ttf
-  AddOutputFilterByType DEFLATE application/x-font-otf
-  AddOutputFilterByType DEFLATE application/x-font-opentype
-  AddOutputFilterByType DEFLATE application/vnd.ms-fontobject
-  AddOutputFilterByType DEFLATE font/ttf
-  AddOutputFilterByType DEFLATE font/otf
-  AddOutputFilterByType DEFLATE font/opentype
-
-# For Olders Browsers Which Can't Handle Compression
-  BrowserMatch ^Mozilla/4 gzip-only-text/html
-  BrowserMatch ^Mozilla/4\.0[678] no-gzip
-  BrowserMatch \bMSIE !no-gzip !gzip-only-text/html
-</IfModule>
+# IDE files #
+###################
+.idea/
+*.sublime-project
+*.sublime-workspace
